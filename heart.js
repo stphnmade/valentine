@@ -36,5 +36,13 @@ function teleportNo() {
 
 // Alert when "Yes" is clicked
 function sayYes() {
-  alert("LFGGGGGGGGGGGG! I'll see you on the 14th! 💘🥰");
+  // alert("LFGGGGGGGGGGGG! I'll see you on the 14th! 💘🥰");
+
+  document.getElementById("popup").style.display = "block";
+  setTimeout(() => {
+    document.getElementById("popup").style.display = "none";
+  }, 18000);
+
+  const music = document.getElementById("valentineMusic");
+  music.play();
 }

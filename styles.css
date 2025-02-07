@@ -66,6 +66,28 @@ input {
   animation: fall linear infinite;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: pink;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup img {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
 @keyframes fall {
   from {
     transform: translateY(-10vh);
