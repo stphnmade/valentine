@@ -18,7 +18,7 @@
       <div><h2>Insert the secert love encryption....</h2></div>
     
     <form action="ask.html" method="post">
-      <input type="password" name="secret" placeholder="Enter the secret" />
+      <input type="password" id="secertInput" name="secret" placeholder="Enter the secret" />
       <div id="s_submit"><button type="submit">Submit</button></div>
     </div>
     
@@ -26,4 +26,12 @@
 </html>
 
 <script src="heart.js"></script>
+
+<script>
+  function redirectToAsk(event) {
+            event.preventDefault(); // Prevent form from refreshing page
+            const secretValue = document.getElementById("secretInput").value;
+            window.location.href = `ask.html?secret=${encodeURIComponent(secretValue)}`;
+        }
+</script>
 

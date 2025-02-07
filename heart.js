@@ -4,7 +4,7 @@ function createHeart() {
   heart.classList.add("heart");
 
   // Random position along the width
-  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.left = Math.random() * 200 + "vw";
 
   // Random size for variation
   const size = Math.random() * 20 + 10; // Size between 10px to 30px

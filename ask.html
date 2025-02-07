@@ -14,21 +14,24 @@
   </head>
   <body>
     <div>
+      <h1 id="secretInput"></h1>
       <div class="container">
         <h1>Will you be my Valentine? 💖</h1>
         <button class="btn yes-btn" onclick="sayYes()">Yes 💕</button>
         <button class="btn no-btn" onmouseover="teleportNo()">No 💔</button>
       </div>
     </div>
-
-    <div>
-      <div class="lfg_container" style="display: none">
-        <h1>Will you be my Valentine? 💖</h1>
-        <button class="btn yes-btn" onclick="sayYes()">Yes 💕</button>
-        <button class="no-btn" onmouseover="teleportNo()">No 💔</button>
-      </div>
     </div>
   </body>
 </html>
 
+<script>
+  function getSecretFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("secret"); 
+        }
+
+        document.getElementById("secretDisplay").textContent = getSecretFromURL();
+
+</script>
 <script src="heart.js"></script>
