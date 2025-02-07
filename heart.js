@@ -28,10 +28,9 @@ setInterval(createHeart, 300);
 
 function teleportNo() {
   const noBtn = document.querySelector(".no-btn");
-  const newX = Math.random() * (window.innerWidth - 100); // Avoiding edges
-  const newY = Math.random() * (window.innerHeight - 50);
-  noBtn.style.left = newX + "px";
-  noBtn.style.top = newY + "px";
+  noBtn.style.position = "absolute";
+  noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+  noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
 }
 
 // Alert when "Yes" is clicked
