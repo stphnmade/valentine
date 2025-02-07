@@ -45,7 +45,7 @@ function sayYes() {
   const music = document.getElementById("valentineMusic");
   music.play();
 
-  music.playbackRate = 0.9;
+  music.playbackRate = 1.5;
 
   // Hide pop-up & overlay when music ends
   music.onended = function () {
