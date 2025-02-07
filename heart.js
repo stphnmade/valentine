@@ -38,11 +38,18 @@ function teleportNo() {
 function sayYes() {
   // alert("LFGGGGGGGGGGGG! I'll see you on the 14th! 💘🥰");
 
-  document.getElementById("popup").style.display = "block";
-  setTimeout(() => {
-    document.getElementById("popup").style.display = "none";
-  }, 180000);
+  document.getElementById("overlay").style.display = "block";
 
+  document.getElementById("popup").style.display = "block";
+  // Play music
   const music = document.getElementById("valentineMusic");
   music.play();
+
+  music.playbackRate = 0.9;
+
+  // Hide pop-up & overlay when music ends
+  music.onended = function () {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  };
 }
