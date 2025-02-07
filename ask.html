@@ -7,7 +7,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="heart.js" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="heart_joeg.webp" type="image/webp" />
     <title>Be my Valentine</title>
@@ -15,23 +14,40 @@
   <body>
     <div>
       <h1 id="secretInput"></h1>
+      <!-- This will display the secret -->
       <div class="container">
         <h1>Will you be my Valentine? 💖</h1>
         <button class="btn yes-btn" onclick="sayYes()">Yes 💕</button>
         <button class="btn no-btn" onmouseover="teleportNo()">No 💔</button>
       </div>
     </div>
-    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // Function to get the secret from URL and display it
+      function getSecretFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("secret"); // Get the 'secret' parameter
+      }
+
+      // Display the secret in the <h1> tag
+      document.getElementById("secretInput").textContent = getSecretFromURL();
+
+      // "Yes" button action
+      function sayYes() {
+        alert("Yay! You are my Valentine! 💘🥰");
+      }
+
+      // Make the "No" button teleport
+      function teleportNo() {
+        const noBtn = document.querySelector(".no-btn");
+        noBtn.style.position = "absolute";
+        noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+        noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+      }
+    </script>
+
+    <!-- Link to heart.js -->
+    <script src="heart.js" defer></script>
   </body>
 </html>
-
-<script>
-  function getSecretFromURL() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get("secret"); 
-        }
-
-        document.getElementById("secretDisplay").textContent = getSecretFromURL();
-
-</script>
-<script src="heart.js"></script>
