@@ -1,0 +1,91 @@
+/* Full-page pink background */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #ffb6c1;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Main container */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+  color: #d63384;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.yes-btn {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.yes-btn:hover {
+  background-color: #d63384;
+}
+
+.no-btn {
+  background-color: #ccc;
+  color: black;
+  position: absolute;
+}
+
+/* Heart falling animation */
+.heart {
+  position: absolute;
+  color: #ff69b4;
+  font-size: 20px;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+#s_submit {
+  color: pink;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#s_submit:hover {
+  border: none;
+  border-radius: 5px;
+}
