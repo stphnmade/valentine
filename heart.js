@@ -41,7 +41,7 @@ function sayYes() {
   document.getElementById("popup").style.display = "block";
   setTimeout(() => {
     document.getElementById("popup").style.display = "none";
-  }, 18000);
+  }, 180000);
 
   const music = document.getElementById("valentineMusic");
   music.play();
